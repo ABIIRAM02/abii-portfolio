@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="bg-black min-h-screen w-full text-white flex justify-center " >
-          <section className="h-full w-3/5 min-h-screen my-[2rem]" >
+          <section className="h-full w-full xl:w-4/6 min-h-screen p-[2rem]" >
             {children}
           </section>
         </main>
