@@ -1,40 +1,42 @@
-import React from "react";
-import { IoMenu } from "react-icons/io5";
+import { portfolio } from '@/util/constants';
+import Image from 'next/image';
+import React from 'react';
+import { IoMenu } from 'react-icons/io5';
 
 const Nav = () => {
   return (
     <main>
-        
-      <section className="hidden bg-myGray p-[8px] px-[18px] lg:flex  justify-between items-center rounded-[18px] text-[14px] w-2/6 hover:cursor-pointer border border-white/[0.1]">
+      <section className="hidden bg-myGray p-[8px] px-[18px] md:flex  justify-between items-center rounded-[18px] text-[14px] w-2/6 hover:cursor-pointer border border-white/[0.1]">
         <div className="flex gap-3 items-center font-bold">
-          <img
+          <Image
             src="https://avatar.iran.liara.run/public/boy?username=abi"
             alt="profile"
-            className="w-7"
+            width={30}
+            height={30}
           />
-          <p>Abiram</p>
+          <p>{portfolio.navbar.name}</p>
         </div>
         <p className="hover:bg-myLightGray p-2 rounded-xl transition duration-200">
-          About
+          {portfolio.navbar.links.about}
         </p>
         <p className="hover:bg-myLightGray p-2 rounded-xl transition duration-200">
-          Contact
+          {portfolio.navbar.links.contact}
         </p>
       </section>
 
-        {/* mobile nav view */}
-      <section className="lg:hidden flex justify-between items-center">
+      {/* mobile nav view */}
+      <section className="md:hidden flex justify-between items-center">
         <div className=" flex gap-3 items-center font-bold">
-          <img
+          <Image
             src="https://avatar.iran.liara.run/public/boy?username=abi"
             alt="profile"
-            className="w-7"
+            width={30}
+            height={30}
           />
-          <p>Abiram</p>
+          <p>{portfolio.navbar.name}</p>
         </div>
         <IoMenu />
       </section>
-
     </main>
   );
 };

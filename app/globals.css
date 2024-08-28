@@ -2,15 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*
-{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-html,body
-{
+html,
+body {
   height: 100%;
   width: 100%;
 }
