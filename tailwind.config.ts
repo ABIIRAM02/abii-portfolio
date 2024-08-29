@@ -22,6 +22,7 @@ const config: Config = {
         },
         myLightGray: '#3F3F46',
         myGray: '#27272A',
+        myBlue:'#06B6D4'
       },
     },
   },
