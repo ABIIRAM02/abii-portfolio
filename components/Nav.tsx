@@ -5,8 +5,8 @@ import { IoMenu } from 'react-icons/io5';
 
 const Nav = () => {
   return (
-    <main>
-      <section className="hidden bg-myGray p-[8px] px-[18px] md:flex  justify-between items-center rounded-[18px] text-[14px] w-2/6 hover:cursor-pointer border border-white/[0.1]">
+    <header>
+      <section className="hidden bg-myGray p-[8px] px-[18px] md:flex justify-between items-center rounded-[18px] text-[14px] w-2/6 hover:cursor-pointer border border-white/[0.1]">
         <div className="flex gap-3 items-center font-bold">
           <Image
             src="https://avatar.iran.liara.run/public/boy?username=abi"
@@ -37,7 +37,7 @@ const Nav = () => {
         </div>
         <IoMenu />
       </section>
-    </main>
+    </header>
   );
 };
 
