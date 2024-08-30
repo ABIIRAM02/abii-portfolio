@@ -23,7 +23,6 @@ const Nav = () => {
           {portfolio.navbar.links.contact}
         </p>
       </section>
-
       {/* mobile nav view */}
       <section className="md:hidden flex justify-between items-center">
         <div className=" flex gap-3 items-center font-bold">
