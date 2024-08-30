@@ -56,7 +56,7 @@ const data = [
 const Work = () => {
   const [workExpValue, setWorkExpValue] = useState(data[0]);
 
-  const handleWorkExp = (index:number) => {
+  const handleWorkExp = (index) => {
     setWorkExpValue(data[index]);
   };
 
@@ -92,8 +92,8 @@ const Work = () => {
           <p>{workExpValue.info.date}</p>
           <p>{workExpValue.info.location}</p>
           <div className="space-y-1" >{
-            workExpValue.info.details.map((data:any,index:number) => (
-              <div className="flex items-center gap-2" key={index}><FaHandPointRight color="#06B6D4"/> <p>{data}</p></div>
+            workExpValue.info.details.map(data => (
+              <div className="flex items-center gap-2"><FaHandPointRight color="#06B6D4"/> <p>{data}</p></div>
             ))
             }</div>
         </div>
