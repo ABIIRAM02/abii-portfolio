@@ -56,7 +56,7 @@ const data = [
 const Work = () => {
   const [workExpValue, setWorkExpValue] = useState(data[0]);
 
-  const handleWorkExp = (index) => {
+  const handleWorkExp = (index:any) => {
     setWorkExpValue(data[index]);
   };
 
