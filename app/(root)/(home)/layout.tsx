@@ -4,7 +4,6 @@ import React, { ReactNode } from "react";
 function Homelayout({ children }: { children: ReactNode }) {
   return (
     <>
-        <Nav />
         {children}
     </>
   );

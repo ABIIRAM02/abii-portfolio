@@ -1,6 +1,14 @@
+import React from 'react'
+import Work from '@/component/Work'
+import Nav from '@/component/Nav'
 
-export default function Home() {
+const Home = () => {
   return (
-   <div></div>
-  );
+    <>
+    <Nav />
+    <Work/>
+    </>
+  )
 }
+
+export default Home
