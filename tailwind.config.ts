@@ -14,15 +14,13 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        primary:{
-
-        },
-        secondary:{
-          default:'#06b6d4',
+        primary: {},
+        secondary: {
+          default: '#06b6d4',
         },
         myLightGray: '#3F3F46',
         myGray: '#27272A',
-        myBlue:'#06B6D4'
+        myBlue: '#06B6D4',
       },
     },
   },

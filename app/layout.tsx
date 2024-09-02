@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
-import { Nunito } from "next/font/google";
+import { Nunito } from 'next/font/google';
 import './globals.css';
 import styles from '@/styles';
 
 const nunito = Nunito({
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal"],
-  display: "swap",
-  subsets: ["latin", "latin-ext"],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal'],
+  display: 'swap',
+  subsets: ['latin', 'latin-ext'],
   preload: true,
-  fallback: ["Arial", "sans-serif"],
+  fallback: ['Arial', 'sans-serif'],
   adjustFontFallback: true,
 });
 

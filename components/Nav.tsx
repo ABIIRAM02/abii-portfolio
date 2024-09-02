@@ -6,7 +6,7 @@ import { IoMenu } from 'react-icons/io5';
 const Nav = () => {
   return (
     <header>
-      <section className="hidden bg-myGray p-[8px] px-[18px] md:flex justify-between items-center rounded-[18px] text-[14px] w-2/6 hover:cursor-pointer border border-white/[0.1]">
+      <section className="hidden bg-myGray p-[8px] px-[18px] md:flex justify-between items-center rounded-[18px] text-[14px] w-2/6 hover:cursor-pointer border border-white/[0.1] mb-[7rem]">
         <div className="flex gap-3 items-center font-bold">
           <Image
             src="https://avatar.iran.liara.run/public/boy?username=abi"

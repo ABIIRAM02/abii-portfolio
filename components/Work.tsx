@@ -1,105 +1,66 @@
-"use client";
-import { useState } from "react";
-import { MdOutlineWorkOutline } from "react-icons/md";
-import { LuSchool } from "react-icons/lu";
-import { PiGraduationCapFill } from "react-icons/pi";
-import { FaHandPointRight } from "react-icons/fa6";
-
-const data = [
-  {
-    sNo: 0,
-    category: "Work",
-    name: "Sharp Right",
-    icons: MdOutlineWorkOutline,
-    info: {
-      role: "FrontEnd Developer",
-      date: "May 2023 - Present",
-      location: "Bangalore (Remote)",
-      details: [
-        "Integrated APIs for dynamic data handling.",
-        "Implemented Redux for state management.",
-        "Developed secure authentication processes.",
-      ],
-    },
-  },
-  {
-    sNo: 1,
-    category: "College",
-    name: "Krishna Adithya",
-    icons: PiGraduationCapFill,
-    info: {
-      role: "BCA",
-      date: "2019 - 2022",
-      location: "Coimbatore,Tamilnadu",
-      details: [
-        "Final year project - Hostel Management",
-      ],
-    },
-  },
-  {
-    sNo: 2,
-    category: "School",
-    name: "Kanchi Sankara",
-    icons: LuSchool,
-    info: {
-      role: "SSLC",
-      date: "2019",
-      location: "Tiruchendur,Tamilnadu",
-      details: [
-        "Worked on SMS Automations",
-        "Worked on Hubspot and Mailchimp integrations",
-      ],
-    },
-  },
-];
+'use client';
+import { useState } from 'react';
+import { FaHandPointRight } from 'react-icons/fa6';
+import { workAndEducation } from '@/util/constants';
 
 const Work = () => {
-  const [workExpValue, setWorkExpValue] = useState(data[0]);
+  const [workExpValue, setWorkExpValue] = useState(workAndEducation[0]);
 
-  const handleWorkExp = (index:any) => {
-    setWorkExpValue(data[index]);
+  const handleWorkExp = (index: any) => {
+    setWorkExpValue(workAndEducation[index]);
   };
 
   return (
-    <div className=" mt-[6rem] md:mt-[10rem] flex flex-col gap-3 text-gray-400">
-      <h2 className="font-bold text-2xl md:text-3xl text-white">Work and Education</h2>
+    <div className="flex flex-col gap-3 text-gray-400 ">
+      <h2 className="font-bold text-2xl md:text-3xl text-white">
+        Work and Education
+      </h2>
       <p className="">
         Summary of professional experience and academic background.
       </p>
 
       <section className="md:pl-[4rem] lg:pl-[6rem] pt-[4rem] flex flex-col md:flex-row gap-10">
         <div className="flex md:flex-col md:border-l md:pl-[2rem] gap-3 md:p-3 border-myBlue/[0.2] ">
-          {data.map((data, index) => (
+          {workAndEducation.map((data, index) => (
             <div
               key={index}
               onClick={() => {
                 handleWorkExp(index);
               }}
               className={`${
-                workExpValue.sNo === index ? "bg-myGray" : "bg-transparent"
+                workExpValue.sNo === index ? 'bg-myGray' : 'bg-transparent'
               } p-2 px-3 md:px-5 cursor-pointer rounded-md flex gap-2 items-center hover:bg-myGray transition duration-300`}
             >
-              <data.icons />
+              <data.icons
+                className={`${workExpValue.sNo === index ? 'text-white' : ''}`}
+              />
               <p>{data.category}</p>
             </div>
           ))}
         </div>
-        <div className="flex flex-col gap-2 font-light text-sm " data-aos="fade-in">
-          <h2 className="font-semibold md:font-bold text-2xl text-white" data-aos="fade-in">
-            {workExpValue.info.role}
-            <span className="text-myBlue"> @{workExpValue.name}</span>
-          </h2>
-          <p>{workExpValue.info.date}</p>
-          <p>{workExpValue.info.location}</p>
-          <div className="space-y-1" >{
-            workExpValue.info.details.map(data => (
-              <div className="flex items-center gap-2"><FaHandPointRight color="#06B6D4"/> <p>{data}</p></div>
-            ))
-            }</div>
-        </div>
+
+        <section className="flex flex-col gap-5 max-h-[11rem] overflow-y-auto customScrollBar pr-10">
+          {workExpValue.info.map((company) => (
+            <div className="flex flex-col gap-2 font-light text-sm ">
+              <h2 className="font-semibold md:font-bold text-2xl text-white">
+                {company.role}
+                <span className="text-myBlue"> @{company.name}</span>
+              </h2>
+              <p>{company.date}</p>
+              <p>{company.location}</p>
+              <div className="space-y-1">
+                {company.details.map((data: any) => (
+                  <div className="flex items-center gap-2">
+                    <FaHandPointRight color="#06B6D4" /> <p>{data}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
       </section>
     </div>
   );
-}
+};
 
-export default Work
+export default Work;
