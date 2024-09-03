@@ -8,7 +8,7 @@ const Hero = () => {
   const { hero } = portfolio;
 
   return (
-    <div className="block relative lg:flex max-w-5xl mx-auto px-0 md:px-2 ">
+    <div className="block relative lg:flex max-w-5xl mx-auto mt-10 md:mt-20 px-0 md:px-2">
       <div>
         <h1 className="font-bold text-3xl md:text-5xl leading-tight text-zinc-50 max-w-3xl">
           {hero.heading.split1}{' '}
@@ -22,12 +22,12 @@ const Hero = () => {
           {hero.description2}{' '}
         </div>
       </div>
-      <div className="mt-4 lg:mt-0 p-3 lg:pl-5 ">
+      <div className="mt-4 lg:mt-0 p-3 lg:pl-5">
         <Image
           alt="hero-img"
           width="500"
           height="500"
-          className="transition duration-500 blur-0 scale-100 rounded-lg"
+          className="transition duration-500 blur-0 mx-auto scale-100 rounded-lg"
           src="/hero-bg.svg"
         />
         <div className={`${styles.flexCenter} space-x-2 mt-2`}>

@@ -2,21 +2,7 @@
 import { useScroll, useTransform, motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-
-interface Projects {
-  name: string;
-  repo: string;
-  repoName: string;
-  content: string;
-  link: string;
-  techs: [string];
-  image: string;
-}
-
-interface TimelineEntry {
-  title: string;
-  projects: [Projects];
-}
+import { TimelineEntry } from '@/util/constants';
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);

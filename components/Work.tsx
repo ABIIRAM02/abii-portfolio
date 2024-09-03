@@ -41,7 +41,10 @@ const Work = () => {
 
         <section className="flex flex-col gap-5 max-h-[11rem] overflow-y-auto customScrollBar pr-10">
           {workExpValue.info.map((company) => (
-            <div className="flex flex-col gap-2 font-light text-sm ">
+            <div
+              key={company.name}
+              className="flex flex-col gap-2 font-light text-sm "
+            >
               <h2 className="font-semibold md:font-bold text-2xl text-white">
                 {company.role}
                 <span className="text-myBlue"> @{company.name}</span>
@@ -49,8 +52,8 @@ const Work = () => {
               <p>{company.date}</p>
               <p>{company.location}</p>
               <div className="space-y-1">
-                {company.details.map((data: any) => (
-                  <div className="flex items-center gap-2">
+                {company.details.map((data, i) => (
+                  <div key={i} className="flex items-center gap-2">
                     <FaHandPointRight color="#06B6D4" /> <p>{data}</p>
                   </div>
                 ))}

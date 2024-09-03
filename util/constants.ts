@@ -105,7 +105,22 @@ export const workAndEducation = [
   },
 ];
 
-export const projectsInfo = [
+export interface Projects {
+  name: string;
+  repo: string;
+  repoName: string;
+  content: string;
+  link: string;
+  techs: string[];
+  image: any;
+}
+
+export interface TimelineEntry {
+  title: string;
+  projects: Projects[]
+}
+
+export const projectsInfo:TimelineEntry[] = [
   {
     title:'Next.Js',
     projects:[
