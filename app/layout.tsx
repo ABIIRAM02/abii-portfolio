@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body >
         <div className={`${styles.boxWidth}`}>{children}</div>
       </body>
     </html>

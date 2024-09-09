@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { TimelineEntry } from '@/util/constants';
+import Link from 'next/link';
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,6 +27,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
+      id="Projects"
       className="w-full bg-white dark:bg-black font-sans md:px-10"
       ref={containerRef}
     >
@@ -58,16 +60,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     <p className="pb-1 border-b-2 border-myGray">
                       {project.name}
                     </p>
-                    <a href={project.link} target="_blank">
+                    <Link href={project.link} target="_blank" className="w-full">
                       <Image
                         src={project.image}
                         alt="ProjectImage"
                         width={20}
                         height={20}
-                        className="h-52 w-full rounded-md border border-white/[0.1]"
+                        className="h-52 w-full rounded-md border border-white/[0.1] object-cover md:object-fill"
                       />
-                    </a>
-                    <p>{project.content}</p>
+                    </Link>
+                    <p className="text-left">{project.content}</p>
                     <div className="space-y-2 text-sm w-full">
                       <div className=" list-none flex flex-wrap gap-2 items-center justify-center capitalize ">
                         {project.techs.map((tech, ind) => (
@@ -77,9 +79,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         ))}
                       </div>
                       <h2 className=" text-myBlue rounded text-center py-3 my-2">
-                        <a target="_blank" href={project.repo}>
+                        <Link target="_blank" href={project.repo}>
                           Git Repo: {project.repoName}
-                        </a>
+                        </Link>
                       </h2>
                     </div>
                   </article>

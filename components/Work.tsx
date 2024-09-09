@@ -11,7 +11,7 @@ const Work = () => {
   };
 
   return (
-    <div className="flex flex-col gap-3 text-gray-400 ">
+    <div id="work" className="flex flex-col gap-3 text-gray-400 ">
       <h2 className="font-bold text-2xl md:text-3xl text-white">
         Work and Education
       </h2>
@@ -19,8 +19,8 @@ const Work = () => {
         Summary of professional experience and academic background.
       </p>
 
-      <section className="md:pl-[4rem] lg:pl-[6rem] pt-[4rem] flex flex-col md:flex-row gap-10">
-        <div className="flex md:flex-col md:border-l md:pl-[2rem] gap-3 md:p-3 border-myBlue/[0.2] ">
+      <section className="md:pl-[4rem] lg:pl-[6rem] pt-[2rem] md:pt-[4rem] flex flex-col md:flex-row gap-10">
+        <div className="flex justify-center md:justify-start md:flex-col md:border-l md:pl-[2rem] gap-3 md:p-3">
           {workAndEducation.map((data, index) => (
             <div
               key={index}
@@ -39,7 +39,7 @@ const Work = () => {
           ))}
         </div>
 
-        <section className="flex flex-col gap-5 max-h-[11rem] overflow-y-auto customScrollBar pr-10">
+        <section className="flex flex-col gap-5 ">
           {workExpValue.info.map((company) => (
             <div
               key={company.name}

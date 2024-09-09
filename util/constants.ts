@@ -1,18 +1,25 @@
 import { MdOutlineWorkOutline } from 'react-icons/md';
 import { LuSchool } from 'react-icons/lu';
 import { PiGraduationCapFill } from 'react-icons/pi';
+import { GrInstagram } from "react-icons/gr"
+import { SiLinkedin } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+
 import globelChat from '@/assets/globelChat.png'
 import globelNews from '@/assets/globelNews.png'
 import expence from '@/assets/expence-tracker.png'
 import yt from '@/assets/ytClone.png'
 
+import abiProfile from '@/assets/profile/abiProfile.jpg'
+
 export const portfolio = {
   navbar: {
-    name: '_$Abiram',
+    name: 'Abiram',
     links: {
-      about: 'about',
-      contact: 'Contact',
+      work: 'works',
+      projects: 'projects',
     },
+    image:abiProfile
   },
   hero: {
     heading: {
@@ -21,6 +28,7 @@ export const portfolio = {
     },
     description1:
       'Meet Piyush Garg, content creator, educator, and entrepreneur known for his expertise in the tech industry. He has successfully launched numerous technical courses on various platforms. Founder of Teachyst, white-labeled Learning Management System (LMS) to help educators monetize their content globally.',
+    image:abiProfile,
     quote: '~ ChatGPT',
     description2: "Building Teachyst when I'm not working on my day job.",
     linkText: 'Teachyst',
@@ -34,13 +42,19 @@ export const socialMediaLinks = [
     id: 1,
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/piyushgarg195/',
-    icon: '/social-media-icons/linkedin-logo.svg',
+    icon: SiLinkedin,
   },
   {
     id: 2,
     name: 'GitHub',
     url: 'https://github.com/piyushgarg-dev',
-    icon: '/social-media-icons/github-logo.svg',
+    icon: SiGithub,
+  },
+  {
+    id: 3,
+    name: 'Instagram',
+    url: 'https://github.com/piyushgarg-dev',
+    icon: GrInstagram,
   },
 ];
 

@@ -25,26 +25,20 @@ const Hero = () => {
       <div className="mt-4 lg:mt-0 p-3 lg:pl-5">
         <Image
           alt="hero-img"
-          width="500"
-          height="500"
+          width="400"
+          height="400"
           className="transition duration-500 blur-0 mx-auto scale-100 rounded-lg"
-          src="/hero-bg.svg"
+          src={hero.image}
         />
         <div className={`${styles.flexCenter} space-x-2 mt-2`}>
-          {socialMediaLinks.map(({ id, url, icon, name }) => (
+          {socialMediaLinks.map((data) => (
             <Link
-              href={url}
-              key={id}
+              href={data.url}
+              key={data.id}
               className="text-zinc-500 text-sm relative hover:text-secondary-default"
             >
-              <span className="relative z-10 px-2 py-2 inline-block  text-white bg-transparent">
-                <Image
-                  alt={`${name}-logo`}
-                  src={icon}
-                  width={20}
-                  height={20}
-                  className="bg-transparent text-white"
-                />
+              <span id='Work' className="relative z-10 px-2 py-2 inline-block  text-white bg-transparent">
+                <data.icon className='text-xl text-myLightGray hover:text-myBlue transition duration-200' />
               </span>
             </Link>
           ))}
