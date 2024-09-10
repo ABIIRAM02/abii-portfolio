@@ -187,3 +187,17 @@ export const projectsInfo:TimelineEntry[] = [
     ]
   },
 ];
+
+export const Skills= [
+  "React",
+  "Next.js",
+  "Typescript",
+  "Node.js",
+  "Python",
+  "Go",
+  "Postgres",
+  "Docker",
+  "Kubernetes",
+  "Java",
+  "C++",
+]
