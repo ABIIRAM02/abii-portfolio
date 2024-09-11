@@ -4,7 +4,7 @@ import { projectsInfo } from '@/util/constants';
 
 const Projects = () => {
   return (
-    <div className="flex flex-col gap-3 text-gray-400">
+    <div className="flex flex-col gap-3 text-gray-400" id="projects">
       <h2 className="font-bold text-2xl md:text-3xl text-white">
         Selected Projects
       </h2>
