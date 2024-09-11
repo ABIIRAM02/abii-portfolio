@@ -1,8 +1,7 @@
 import React, { memo } from 'react';
-import styles from '@/styles';
-import { portfolio, socialMediaLinks } from '@/util/constants';
+import { portfolio } from '@/util/constants';
 import Image from 'next/image';
-import Link from 'next/link';
+import { IoLocationSharp } from 'react-icons/io5';
 
 const Hero = () => {
   const { hero } = portfolio;
@@ -22,7 +21,7 @@ const Hero = () => {
           {hero.description2}{' '}
         </div>
       </div>
-      <div className="mt-4 lg:mt-0 p-3 lg:pl-5">
+      <div className="mt-4 lg:mt-0 p-3 lg:pl-5 space-y-2">
         <Image
           alt="hero-img"
           width="400"
@@ -30,18 +29,9 @@ const Hero = () => {
           className="transition duration-500 blur-0 mx-auto scale-100 rounded-lg"
           src={hero.image}
         />
-        <div className={`${styles.flexCenter} space-x-2 mt-2`}>
-          {socialMediaLinks.map((data) => (
-            <Link
-              href={data.url}
-              key={data.id}
-              className="text-zinc-500 text-sm relative hover:text-secondary-default"
-            >
-              <span id='Work' className="relative z-10 px-2 py-2 inline-block  text-white bg-transparent">
-                <data.icon className='text-xl text-myLightGray hover:text-myBlue transition duration-200' />
-              </span>
-            </Link>
-          ))}
+        <div className="text-myLightGray text-center flex gap-2 justify-center items-center">
+          <IoLocationSharp />
+          <p>Bangalore, India</p>
         </div>
       </div>
     </div>

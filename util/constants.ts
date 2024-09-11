@@ -2,8 +2,11 @@ import { MdOutlineWorkOutline } from 'react-icons/md';
 import { LuSchool } from 'react-icons/lu';
 import { PiGraduationCapFill } from 'react-icons/pi';
 import { GrInstagram } from "react-icons/gr"
-import { SiLinkedin } from "react-icons/si";
+import { IoLogoLinkedin } from "react-icons/io5";
 import { SiGithub } from "react-icons/si";
+import { LuContact } from "react-icons/lu";
+import { HiHome } from "react-icons/hi2";
+import { FaXTwitter } from "react-icons/fa6";
 
 import globelChat from '@/assets/globelChat.png'
 import globelNews from '@/assets/globelNews.png'
@@ -13,14 +16,6 @@ import yt from '@/assets/ytClone.png'
 import abiProfile from '@/assets/profile/abiProfile.jpg'
 
 export const portfolio = {
-  navbar: {
-    name: 'Abiram',
-    links: {
-      work: 'works',
-      projects: 'projects',
-    },
-    image:abiProfile
-  },
   hero: {
     heading: {
       split1: "Trust me, I'm a ",
@@ -37,26 +32,41 @@ export const portfolio = {
   footer: {},
 };
 
-export const socialMediaLinks = [
-  {
-    id: 1,
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/piyushgarg195/',
-    icon: SiLinkedin,
+export const navDivisions = {
+  home:{
+    title:'Home',
+    icon:HiHome,
+    href:''
   },
-  {
-    id: 2,
-    name: 'GitHub',
-    url: 'https://github.com/piyushgarg-dev',
-    icon: SiGithub,
+  contact:{
+    title:'Contact',
+    icon:LuContact,
+    href:''
   },
-  {
-    id: 3,
-    name: 'Instagram',
-    url: 'https://github.com/piyushgarg-dev',
-    icon: GrInstagram,
-  },
-];
+}
+
+export const socialmediaLinks:socialmediaLinksProps[] = [
+    {
+      title:'LinkedIn',
+      icon:IoLogoLinkedin,
+      href:''
+    },
+    {
+      title:'Twitter',
+      icon:FaXTwitter,
+      href:''
+    },
+    {
+      title:'Instagram',
+      icon:GrInstagram,
+      href:''
+    },
+    {
+      title:'Github',
+      icon:SiGithub,
+      href:''
+    },
+  ]
 
 export const workAndEducation = [
   {
@@ -118,6 +128,12 @@ export const workAndEducation = [
     ],
   },
 ];
+
+interface socialmediaLinksProps {
+  title: string;
+  icon: any;
+  href: string;
+}
 
 export interface Projects {
   name: string;

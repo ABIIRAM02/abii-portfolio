@@ -22,6 +22,9 @@ const config: Config = {
         myGray: '#27272A',
         myBlue: '#06B6D4',
       },
+      boxShadow: {
+        'custom-inner': 'inset 0px 0px 55px 10px  #27272A',
+      },
     },
   },
   plugins: [],
