@@ -10,7 +10,7 @@ const SkillsSection = () => {
           {Skills.map((skill: any, id: number) => (
             <div
               key={id}
-              className="text-[14px] inline-flex items-center rounded-md px-2.5 py-1 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent hover:bg-white shadow bg-black border border-[#06b6d4] hover:border-white hover:text-black text-white cursor-pointer"
+              className="text-[14px] inline-flex items-center rounded-md px-2.5 py-1 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-white shadow bg-black border border-secondary-default hover:border-white hover:text-black text-white cursor-pointer"
             >
               {skill}
             </div>
