@@ -1,5 +1,4 @@
-import styles from '@/styles';
-import { portfolio, socialMediaLinks } from '@/util/constants';
+import { portfolio, socialmediaLinks } from '@/util/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -26,8 +25,8 @@ const Footer = () => {
         <Link href="#Projects">{navbar.links.projects}</Link>
       </div>
 
-      <div className={`${styles.flexCenter} space-x-2`}>
-        {socialMediaLinks.map((data) => (
+      <div className={`flex justify-center items-center space-x-2`}>
+        {socialmediaLinks.map((data: any) => (
           <Link
             target="_blank"
             href={data.url}

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Oswald } from 'next/font/google';
 import './globals.css';
-import styles from '@/styles';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={`${styles.boxWidth} ${oswald.variable}`}>
+        <div className={`xl:max-w-[1440px] w-full ${oswald.variable}`}>
           {children}
         </div>
       </body>

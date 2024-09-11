@@ -16,6 +16,15 @@ import yt from '@/assets/ytClone.png'
 import abiProfile from '@/assets/profile/abiProfile.jpg'
 
 export const portfolio = {
+  navbar: {
+    name: 'Abiram',
+    links: {
+      skills:'Skills',
+      work: 'Works',
+      projects: 'Projects',
+    },
+    image:abiProfile
+  },
   hero: {
     heading: {
       split1: "Trust me, I'm a ",
@@ -143,6 +152,12 @@ export interface Projects {
   link: string;
   techs: string[];
   image: any;
+}
+
+export interface NavLinkProps {
+   href: string,
+   label: string, 
+   onClick?: () => void 
 }
 
 export interface TimelineEntry {
