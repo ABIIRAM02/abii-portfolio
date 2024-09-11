@@ -4,12 +4,11 @@ import SkillsSection from '@/components/SkillsSection';
 import Work from '@/components/Work';
 
 export default function Home() {
-
   return (
-    <main className="space-y-[8rem]">
+    <main className="space-y-[6rem]">
       <Hero />
+      <SkillsSection />
       <Work />
-      <SkillsSection/>
       <Projects />
     </main>
   );

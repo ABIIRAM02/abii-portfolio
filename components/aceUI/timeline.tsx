@@ -60,7 +60,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     <p className="pb-1 border-b-2 border-myGray">
                       {project.name}
                     </p>
-                    <Link href={project.link} target="_blank" className="w-full">
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      className="w-full"
+                    >
                       <Image
                         src={project.image}
                         alt="ProjectImage"
@@ -78,11 +82,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                           </li>
                         ))}
                       </div>
-                      <h2 className=" text-myBlue rounded text-center py-3 my-2">
+                      <p className=" text-myBlue rounded text-center py-3 my-2">
                         <Link target="_blank" href={project.repo}>
                           Git Repo: {project.repoName}
                         </Link>
-                      </h2>
+                      </p>
                     </div>
                   </article>
                 ))}

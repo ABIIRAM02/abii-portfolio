@@ -31,7 +31,7 @@ const Hero = () => {
         />
         <div className="text-myLightGray text-center flex gap-2 justify-center items-center">
           <IoLocationSharp />
-          <p>Bangalore, India</p>
+          <h2>Bangalore, India</h2>
         </div>
       </div>
     </div>
