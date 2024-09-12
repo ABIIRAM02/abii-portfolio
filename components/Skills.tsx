@@ -1,7 +1,7 @@
 import React from 'react';
 import { Skills } from '@/util/constants';
 
-const SkillsSection = () => {
+const Skill = () => {
   return (
     <section id="skills">
       <div className="flex min-h-0 flex-col gap-y-3">
@@ -21,4 +21,4 @@ const SkillsSection = () => {
   );
 };
 
-export default SkillsSection;
+export default Skill;

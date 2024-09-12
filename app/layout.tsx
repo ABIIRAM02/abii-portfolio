@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={`xl:max-w-[1440px] w-full ${oswald.variable}`}>
+        <div className={`${oswald.variable}`}>
           {children}
         </div>
       </body>
