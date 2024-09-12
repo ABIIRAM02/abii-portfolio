@@ -66,11 +66,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       className="w-full"
                     >
                       <Image
+                        layout="responsive"
                         src={project.image}
                         alt="ProjectImage"
                         width={20}
                         height={20}
-                        className="h-52 w-full rounded-md border border-white/[0.1] object-cover md:object-fill"
+                        className="h-52 w-full rounded-md border border-white/[0.1]"
                       />
                     </Link>
                     <p className="text-left">{project.content}</p>
@@ -82,11 +83,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                           </li>
                         ))}
                       </div>
-                      <p className=" text-primary-default rounded text-center py-3 my-2 ">
+                      <p className=" text-primary-default rounded text-center py-3 my-2">
                         <Link
                           target="_blank"
                           href={project.repo}
-                          className="flex items-center justify-center gap-2"
+                          className="flex items-center justify-center gap-2 flex-wrap"
                         >
                           <span className="text-myLightGray flex items-center gap-1">
                             <SiGithub />

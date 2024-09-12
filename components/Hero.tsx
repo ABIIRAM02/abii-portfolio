@@ -1,10 +1,12 @@
-import React, { memo } from 'react';
+'use client';
+import React, { memo, useState } from 'react';
 import { portfolio } from '@/util/constants';
 import Image from 'next/image';
 import { IoLocationSharp } from 'react-icons/io5';
 
 const Hero = () => {
   const { hero } = portfolio;
+  const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <div className="block relative lg:flex max-w-5xl mx-auto mt-10 md:mt-20 px-0 md:px-2">
@@ -26,12 +28,15 @@ const Hero = () => {
           alt="hero-img"
           width="400"
           height="400"
-          className="transition duration-500 blur-0 mx-auto scale-100 rounded-lg"
+          className={`transition duration-[500ms] ease-in-out mx-auto scale-100 rounded-lg ${
+            isLoaded ? 'blur-0' : 'blur-sm'
+          }`}
           src={hero.image}
+          onLoadingComplete={() => setIsLoaded(true)}
         />
         <div className="text-myLightGray text-center flex gap-2 justify-center items-center">
           <IoLocationSharp />
-          <h2>Bangalore, India</h2>
+          <h2>{isLoaded ? 'Bangalore, India' : 'Loading...'}</h2>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 'use client';
-
 import { NavLinkProps, portfolio } from '@/util/constants';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,7 +22,7 @@ const MainNavbar = () => {
     [navbar.links]
   );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isLoaded, setIsLoaded] = useState(false);
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);
@@ -47,11 +46,14 @@ const MainNavbar = () => {
       <section className="hidden bg-myGray p-[8px] px-[18px] md:flex justify-between items-center rounded-[18px] text-[14px] w-[fit-content] gap-4 hover:cursor-pointer mb-[2rem] border-secondary-default border">
         <Link href="#Hero" className="flex gap-3 items-center font-bold">
           <Image
+            src={navbar.image}
             alt="hero-img"
             width="40"
             height="40"
-            className="rounded-full"
-            src={navbar.image}
+            className={`transition duration-[500ms] ease-in-out mx-auto rounded-full ${
+              isLoaded ? 'blur-0' : 'blur-[2px]'
+            }`}
+            onLoadingComplete={() => setIsLoaded(true)}
           />
           <p>{navbar.name}</p>
         </Link>
@@ -65,7 +67,10 @@ const MainNavbar = () => {
             alt="profile"
             width={30}
             height={30}
-            className="scale-110 rounded-full"
+            className={`transition duration-[500ms] ease-in-out mx-auto rounded-full ${
+              isLoaded ? 'blur-0' : 'blur-[2px]'
+            }`}
+            onLoadingComplete={() => setIsLoaded(true)}
           />
           <p>{navbar.name}</p>
         </div>
