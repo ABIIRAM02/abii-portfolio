@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { TimelineEntry } from '@/util/constants';
 import Link from 'next/link';
+import { SiGithub } from 'react-icons/si';
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -81,9 +82,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                           </li>
                         ))}
                       </div>
-                      <p className=" text-myBlue rounded text-center py-3 my-2">
-                        <Link target="_blank" href={project.repo}>
-                          Git Repo: {project.repoName}
+                      <p className=" text-primary-default rounded text-center py-3 my-2 ">
+                        <Link
+                          target="_blank"
+                          href={project.repo}
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <span className="text-myLightGray flex items-center gap-1">
+                            <SiGithub />
+                            Source :
+                          </span>{' '}
+                          {project.repoName}
                         </Link>
                       </p>
                     </div>

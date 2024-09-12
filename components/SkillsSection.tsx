@@ -6,7 +6,7 @@ const SkillsSection = () => {
     <section id="skills">
       <div className="flex min-h-0 flex-col gap-y-3">
         <h2 className="font-bold text-2xl md:text-3xl text-white">Skills</h2>
-        <div className="flex flex-wrap gap-4 mt-3">
+        <div className="flex flex-wrap gap-2 mt-3">
           {Skills.map((skill: any, id: number) => (
             <div
               key={id}

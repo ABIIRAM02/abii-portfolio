@@ -1,5 +1,6 @@
 // import Footer from '@/components/Footer';
 import MainNavbar from '@/components/MainNavbar';
+import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import React, { ReactNode } from 'react';
 
@@ -11,9 +12,8 @@ function Homelayout({ children }: { children: ReactNode }) {
           <MainNavbar />
           <Nav />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
-        {/* <Footer /> */}
       </div>
     </>
   );

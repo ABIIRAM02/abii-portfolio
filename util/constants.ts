@@ -116,7 +116,7 @@ export const workAndEducation = [
         role: 'BCA',
         date: '2019 - 2022',
         location: 'Coimbatore,Tamilnadu',
-        details: ['Final year project - Hostel Management'],
+        details: ['Class people leader','Final year project - Hostel Management'],
       },
     ],
   },
