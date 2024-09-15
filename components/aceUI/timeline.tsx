@@ -28,7 +28,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-black font-sans md:px-10"
+      className="w-full bg-white dark:bg-black font-sans md:px-10 "
       ref={containerRef}
     >
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -74,7 +74,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         className="h-52 w-full rounded-md border border-white/[0.1]"
                       />
                     </Link>
-                    <p className="text-left">{project.content}</p>
+                    <p className="text-left px-1">{project.content}</p>
                     <div className="space-y-2 text-sm w-full">
                       <div className=" list-none flex flex-wrap gap-2 items-center justify-center capitalize ">
                         {project.techs.map((tech, ind) => (

@@ -31,10 +31,10 @@ export const portfolio = {
       split2: 'software engineer.',
     },
     description1:
-      'Meet Piyush Garg, content creator, educator, and entrepreneur known for his expertise in the tech industry. He has successfully launched numerous technical courses on various platforms. Founder of Teachyst, white-labeled Learning Management System (LMS) to help educators monetize their content globally.',
+      'Meet Abiram, a web developer specializing in React.js and Next.js with a strong foundation in the MERN stack. An avid outdoor enthusiast, enjoy hiking and hitting Gym. Always eager to work on new challenges and projects that push his technical boundaries while keeping things light-hearted and fun.',
     image:abiProfile,
     quote: '~ ChatGPT',
-    description2: "Building Teachyst when I'm not working on my day job.",
+    description2: "You'll find me working on freelance gigs or exploring personal projects that fuel my creativity, When I'm not immersed in my day job.",
     linkText: 'Teachyst',
     linkUrl: 'https://teachyst.com',
   },
@@ -45,12 +45,12 @@ export const navDivisions = {
   home:{
     title:'Home',
     icon:HiHome,
-    href:''
+    href:'#home'
   },
   contact:{
     title:'Contact',
     icon:LuContact,
-    href:''
+    href:'#contact'
   },
 }
 
@@ -58,7 +58,7 @@ export const socialmediaLinks:socialmediaLinksProps[] = [
     {
       title:'LinkedIn',
       icon:IoLogoLinkedin,
-      href:''
+      href:'https://www.linkedin.com/in/abiiprofile/'
     },
     {
       title:'Twitter',
@@ -68,12 +68,12 @@ export const socialmediaLinks:socialmediaLinksProps[] = [
     {
       title:'Instagram',
       icon:GrInstagram,
-      href:''
+      href:'https://www.instagram.com/abii_ram_02/'
     },
     {
       title:'Github',
       icon:SiGithub,
-      href:''
+      href:'https://github.com/ABIIRAM02?tab=repositories'
     },
   ]
 
@@ -171,7 +171,7 @@ export const projectsInfo:TimelineEntry[] = [
     projects:[
       {
         name:'Chat-App',
-        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit dignissimos eaque ipsa vel labore odio id ipsam molestias officia aliquid!Lorem ipsum, dolor sit amet consectetur adipisicing elit. ',
+        content:'Developed a Next.js application featuring real-time chat functionality, integrated with Socket.IO for seamless, real-time message handling on the server side. The application uses Google OAuth for secure authentication, allowing users to log in via their Gmail accounts. Chat messages are stored in MongoDB for persistent data storage, ensuring that conversations are displayed upon the initial render. This combination of technologies ensures a responsive and secure user experience.',
         techs:['Next', 'Tailwind', 'MongoDb', 'Socket.io', 'Google-OAuth'],
         image:globelChat,
         repoName:'ABIIRAM02/chat-app-socketio',
@@ -180,7 +180,7 @@ export const projectsInfo:TimelineEntry[] = [
       },
       {
         name:'Globel-News',
-        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit dignissimos eaque ipsa vel labore odio id ipsam molestias officia aliquid!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit dignissimos eaque ipsa vel labore odio id ipsam molestias officia aliquid!Lorem ipsum, dolor sit amet consectetur adipisicing elit. ',
+        content:'This project showcases a dynamic news website built using Next.js 13 and Tailwind CSS, featuring full responsiveness and dark mode. It efficiently handles static and dynamic data with Server-Side Rendering (SSR) and Incremental Static Regeneration (ISR) alternatives. The app utilizes the News API with search capabilities by keywords and categories, integrating Stepzen for a GraphQL interface. TypeScript ensures minimal bugs, and the website is deployed on Vercel for optimized performance.',
         techs:['Next', 'Tailwind', 'TypeScript', 'GraphQl', 'Rapid-API'],
         image:globelNews,
         repoName:'ABIIRAM02/the-globel-news',
@@ -194,8 +194,8 @@ export const projectsInfo:TimelineEntry[] = [
     projects:[
       {
         name:'Expence-Tracker',
-        content:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit dignissimos eaque ipsa vel labore odio id ipsam molestias officia aliquid!Lorem ipsum, dolor sit amet consectetur adipisicing elit. ',
-        techs:['React', 'Tailwind', 'MongoDb', 'GraphQL', 'Docker'],
+        content:'Built an Expense Tracker application using the MERN stack and GraphQL, providing users with an intuitive interface to manage and track their financial activities. The app features secure user authentication for login and management, along with functionality to easily add, edit, and delete expenses. Leveraging GraphQL enables efficient real-time updates, while the responsive design ensures smooth usability across both desktop and mobile devices. To deploy, you can use the Docker pull command: docker pull abii02/expence-tracker.',
+        techs:['React', 'Tailwind', 'MongoDb', 'Express', 'GraphQL', 'Docker'],
         image:expence,
         repoName:'ABIIRAM02/expence-tracker-mern-gql',
         repo:'https://github.com/ABIIRAM02/expence-tracker-mern-gql',
@@ -208,7 +208,7 @@ export const projectsInfo:TimelineEntry[] = [
     projects:[
       {
         name:'You-tube Clone',
-        content:'Developed a YouTube clone using Rapid API, featuring a complete video listing, search filtering, and a user-friendly interface with video suggestions displayed on the left during browsing and on the right while viewing videos.',
+        content:'Developed a simple YouTube clone using Rapid API, featuring a complete video listing, search filtering, and a user-friendly interface with video suggestions displayed on the left during browsing and on the right while viewing videos.',
         techs:['React', 'Material-UI', 'Rapid-API'],
         image:yt,
         repoName:'ABIIRAM02/YTclone',
@@ -222,13 +222,15 @@ export const projectsInfo:TimelineEntry[] = [
 export const Skills= [
   "React",
   "Next.js",
+  "JavaScript",
   "Typescript",
   "Node.js",
-  "Python",
-  "Go",
-  "Postgres",
-  "Docker",
-  "Kubernetes",
-  "Java",
-  "C++",
+  "Express.js",
+  "MongoDB",
+  "HTML",
+  "CSS",
+  "TailwindCss",
+  "MUI",
+  "GraphQL",
+  "AWS",
 ]

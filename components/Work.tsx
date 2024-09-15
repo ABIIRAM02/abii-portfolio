@@ -11,7 +11,7 @@ const Work = () => {
   };
 
   return (
-    <div className="flex flex-col gap-3 text-gray-400" id="work">
+    <div className="flex flex-col gap-3 text-gray-400">
       <h2 className="font-bold text-2xl md:text-3xl text-white">
         Work and Education
       </h2>

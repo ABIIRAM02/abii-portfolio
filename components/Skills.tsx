@@ -1,12 +1,12 @@
 import React from 'react';
 import { Skills } from '@/util/constants';
 
-const SkillsSection = () => {
+const Skill = () => {
   return (
-    <section id="skills">
+    <section>
       <div className="flex min-h-0 flex-col gap-y-3">
         <h2 className="font-bold text-2xl md:text-3xl text-white">Skills</h2>
-        <div className="flex flex-wrap gap-2 mt-3">
+        <div id="work" className="flex flex-wrap gap-2 mt-3">
           {Skills.map((skill: any, id: number) => (
             <div
               key={id}
@@ -21,4 +21,4 @@ const SkillsSection = () => {
   );
 };
 
-export default SkillsSection;
+export default Skill;

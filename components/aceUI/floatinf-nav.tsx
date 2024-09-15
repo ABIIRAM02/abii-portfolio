@@ -8,7 +8,6 @@
 
 import { navDivisions } from '@/util/constants';
 import { cn } from '@/util/util';
-import { IconLayoutNavbarCollapse } from '@tabler/icons-react';
 import {
   AnimatePresence,
   MotionValue,
@@ -18,14 +17,14 @@ import {
   useTransform,
 } from 'framer-motion';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const { home, contact } = navDivisions;
+const isMobileDevice = () => window.innerWidth <= 500;
 
 export const FloatingDock = ({
   items,
   desktopClassName,
-  mobileClassName,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   desktopClassName?: string;
@@ -34,63 +33,7 @@ export const FloatingDock = ({
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
     </>
-  );
-};
-
-const FloatingDockMobile = ({
-  items,
-  className,
-}: {
-  items: { title: string; icon: any; href: string }[];
-  className?: string;
-}) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={cn('fixed bottom-5 right-5 block md:hidden', className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2"
-          >
-            {items.concat([contact, home]).map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
-                >
-                  <div className="h-4 w-4">{<item.icon />}</div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
-      >
-        <IconLayoutNavbarCollapse className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
-      </button>
-    </div>
   );
 };
 
@@ -102,22 +45,53 @@ const FloatingDockDesktop = ({
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(isMobileDevice());
+    const handleResize = () => {
+      setIsMobile(isMobileDevice());
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
+      onMouseMove={(e) => !isMobile && mouseX.set(e.pageX)}
+      onMouseLeave={() => !isMobile && mouseX.set(Infinity)}
       className={cn(
-        'mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 py-3',
+        'mx-auto flex gap-1 shadow-lg shadow-black md:gap-4 items-end rounded-full bg-gray-50 dark:bg-zinc-900 p-1 md:px-4 md:py-3 md:h-16',
         className
       )}
     >
-      <IconContainer mouseX={mouseX} key={home.title} {...home} />
+      <IconContainer
+        isMobile={isMobile}
+        mouseX={mouseX}
+        key={home.title}
+        {...home}
+      />
       <span className="border border-white/[0.2] h-full" />
       {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        <IconContainer
+          isMobile={isMobile}
+          mouseX={mouseX}
+          key={item.title}
+          {...item}
+        />
       ))}
       <span className="border border-white/[0.2] h-full" />
-      <IconContainer mouseX={mouseX} key={contact.title} {...contact} />
+      <IconContainer
+        isMobile={isMobile}
+        mouseX={mouseX}
+        key={contact.title}
+        {...contact}
+      />
     </motion.div>
   );
 };
@@ -127,6 +101,7 @@ function IconContainer(data: {
   title: string;
   icon: any;
   href: string;
+  isMobile: boolean;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
@@ -177,7 +152,7 @@ function IconContainer(data: {
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center relative"
+        className="aspect-square rounded-full bg-transparent md:dark:bg-neutral-800 flex items-center justify-center relative"
       >
         <AnimatePresence>
           {hovered && (
@@ -192,7 +167,10 @@ function IconContainer(data: {
           )}
         </AnimatePresence>
         <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
+          style={{
+            width: data.isMobile ? 18 : widthIcon,
+            height: data.isMobile ? 18 : heightIcon,
+          }}
           className="flex items-center justify-center text-3xl"
         >
           {<data.icon />}
