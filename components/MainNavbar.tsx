@@ -25,7 +25,7 @@ const MainNavbar = () => {
 
   return (
     <section className="hidden bg-myGray p-[8px] px-[18px] md:flex justify-between items-center rounded-[18px] text-[14px] w-[fit-content] gap-4 hover:cursor-pointer mb-[2rem] border-secondary-default border">
-      <Link href="hero" className="flex gap-3 items-center font-bold">
+      <Link href="#hero" className="flex gap-3 items-center font-bold">
         <Image
           src={navbar.image}
           alt="hero-img"
