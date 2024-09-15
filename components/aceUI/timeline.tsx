@@ -16,7 +16,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       const rect = ref.current.getBoundingClientRect();
       setHeight(rect.height);
     }
-  }, [ref]);
+  }, [ref, data]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -72,6 +72,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                         width={20}
                         height={20}
                         className="h-52 w-full rounded-md border border-white/[0.1]"
+                        priority
                       />
                     </Link>
                     <p className="text-left px-1">{project.content}</p>

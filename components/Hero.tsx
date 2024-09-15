@@ -36,7 +36,7 @@ const Hero = () => {
               isLoaded ? 'blur-0' : 'blur-sm'
             }`}
             src={hero.image}
-            onLoadingComplete={() => setIsLoaded(true)}
+            onLoad={() => setIsLoaded(true)}
           />
         </section>
         <p className="text-zinc-400 font-normal text-sm md:text-base max-w-2xl mt-8 tracking-wide">
