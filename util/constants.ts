@@ -94,17 +94,7 @@ export const workAndEducation = [
           'Redux for state management.',
           'Developed secure authentication processes.',
         ],
-      },
-      {
-        name: 'Zoho',
-        role: 'Softwere Developer',
-        date: 'May 2023 - Present',
-        location: 'Bangalore (Remote)',
-        details: [
-          'Integrated APIs for dynamic data handling.',
-          'Redux for state management.',
-        ],
-      },
+      }
     ],
   },
   {
@@ -232,6 +222,7 @@ export const Skills = [
   'Typescript',
   'Node.js',
   'Express.js',
+  'React-Shopify',
   'MongoDB',
   'HTML',
   'CSS',
