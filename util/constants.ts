@@ -94,7 +94,7 @@ export const workAndEducation = [
           'Redux for state management.',
           'Developed secure authentication processes.',
         ],
-      }
+      },
     ],
   },
   {

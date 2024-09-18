@@ -10,10 +10,10 @@ const Footer = () => {
       <p className="text-lg md:text-2xl text-myLightGray">
         Wanna chat? Just shoot me a dm{' '}
         <Link
-          href="https://www.instagram.com/abii_ram_02/"
+          href="https://www.linkedin.com/in/abiiprofile/"
           className="text-primary-default"
         >
-          with a direct question on Instagram
+          with a direct question on LinkedIn
         </Link>{' '}
         and I&apos;ll respond whenever I can. I will ignore all soliciting.
       </p>
