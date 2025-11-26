@@ -76,7 +76,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     <div className="space-y-2 text-sm w-full">
                       <div className=" list-none flex flex-wrap gap-2 items-center justify-center capitalize ">
                         {project.techs.map((tech, ind) => (
-                          <li key={ind} className="p-1 px-3 bg-myGray rounded">
+                          <li
+                            key={ind}
+                            className="text-[14px] inline-flex items-center rounded-md px-2.5 py-1 transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-white shadow bg-black border border-secondary-default hover:border-white hover:text-black text-white "
+                          >
                             {tech}
                           </li>
                         ))}

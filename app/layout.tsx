@@ -3,8 +3,10 @@ import { Oswald } from 'next/font/google';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'abii-Portfolio',
-  description: 'Web Developer',
+  title: "abii's portfolio",
+  description: 'web developer',
+  manifest: '/manifest.json',
+  themeColor: '#ffffff',
 };
 
 const oswald = Oswald({

@@ -1,0 +1,20 @@
+{
+  "name": "Check this out",
+  "short_name": "abiram",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "/icons/profile-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/profile.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -27,17 +27,15 @@ export const portfolio = {
   },
   hero: {
     heading: {
-      split1: "Trust me, I'm a ",
+      split1: "Guess what, I'm a ",
       split2: 'software engineer.',
     },
     description1:
-      'Meet Abiram, a web developer specializing in React.js and Next.js with a strong foundation in the MERN stack. An avid outdoor enthusiast, enjoy hiking and hitting Gym. Always eager to work on new challenges and projects that push his technical boundaries while keeping things light-hearted and fun.',
+      'Meet Abiram, a web developer specializing in React.js and Next.js with a strong foundation in the MERN stack. An avid outdoor enthusiast, enjoys hiking and hitting Gym. Always eager to work on new challenges and projects that push his technical boundaries while keeping things light-hearted and fun.',
     image: abiProfile,
     quote: '~ ChatGPT',
     description2:
       "You'll find me working on freelance gigs or exploring personal projects that fuel my creativity, When I'm not immersed in my day job.",
-    linkText: 'Teachyst',
-    linkUrl: 'https://teachyst.com',
   },
   footer: {},
 };
@@ -121,7 +119,7 @@ export const workAndEducation = [
     info: [
       {
         name: 'Kanchi Sankara',
-        role: 'SSLC',
+        role: 'SSLC & HSC',
         date: '2019',
         location: 'Tiruchendur,Tamilnadu',
         details: ['Last Bencher'],
@@ -229,5 +227,6 @@ export const Skills = [
   'TailwindCss',
   'MUI',
   'GraphQL',
+  'Docker',
   'AWS',
 ];
