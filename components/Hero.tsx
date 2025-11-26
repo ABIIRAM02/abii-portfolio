@@ -1,13 +1,11 @@
 'use client';
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useState } from 'react';
 import { portfolio } from '@/util/constants';
 import Image from 'next/image';
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaQuoteLeft } from 'react-icons/fa6';
-import { FaQuoteRight } from 'react-icons/fa6'
+import { FaQuoteRight } from 'react-icons/fa6';
 import face from '@/assets/profile/profile.jpg';
-;
-
 const Hero = () => {
   const { hero } = portfolio;
   const [isLoaded, setIsLoaded] = useState(false);
@@ -23,13 +21,14 @@ const Hero = () => {
             <h2 className="pb-2 text-xl md:text-3xl font-normal">
               Haaay! abii here👋{' '}
             </h2>
-             <h1 className="md:hidden">
-              {hero.heading.split1}<br /> i'm a{' '}
+            <h1 className="md:hidden">
+              {hero.heading.split1}
+              <br /> i'm a{' '}
               <span className="text-secondary-default">
                 {hero.heading.split2}
               </span>
-            </h1> 
-             <h1 className="hidden md:block">
+            </h1>
+            <h1 className="hidden md:block">
               {hero.heading.split1} i'm a{' '}
               <span className="text-secondary-default">
                 {hero.heading.split2}
