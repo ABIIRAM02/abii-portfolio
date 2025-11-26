@@ -23,13 +23,13 @@ const Hero = () => {
             </h2>
             <h1 className="md:hidden">
               {hero.heading.split1}
-              <br /> i'm a{' '}
+              <br /> i&apos;m a{' '}
               <span className="text-secondary-default">
                 {hero.heading.split2}
               </span>
             </h1>
             <h1 className="hidden md:block">
-              {hero.heading.split1} i'm a{' '}
+              {hero.heading.split1} i&apos;m a{' '}
               <span className="text-secondary-default">
                 {hero.heading.split2}
               </span>
