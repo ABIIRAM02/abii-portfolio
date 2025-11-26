@@ -8,13 +8,13 @@ const Footer = () => {
     >
       <h2 className="font-bold text-4xl md:text-5xl">Get in Touch</h2>
       <p className="text-lg md:text-2xl text-myLightGray">
-        Wanna chat? Just shoot me a{' '}
-        <span className="text-primary-default">DM</span>{' '}
+        <span className="text-primary-default">Wanna chat?</span> Just shoot me
+        a <span className="text-primary-default">DM</span> with a straight
+        question on{' '}
         <Link href="https://www.linkedin.com/in/abiiprofile/">
-          with a straight question on{' '}
           <span className="text-primary-default">LinkedIn</span>
         </Link>{' '}
-        and I&apos;ll respond whenever I can.
+        and I&apos;ll respond whenever I can. 👽
       </p>
     </footer>
   );

@@ -14,6 +14,7 @@ import expence from '@/assets/expence-tracker.png';
 import yt from '@/assets/ytClone.png';
 
 import abiProfile from '@/assets/profile/abiProfile.jpg';
+import face from '@/assets/profile/profile.jpg';
 
 export const portfolio = {
   navbar: {
@@ -23,11 +24,11 @@ export const portfolio = {
       work: 'Works',
       projects: 'Projects',
     },
-    image: abiProfile,
+    image: face,
   },
   hero: {
     heading: {
-      split1: "Guess what, I'm a ",
+      split1: "Guess what,",
       split2: 'software engineer.',
     },
     description1:
